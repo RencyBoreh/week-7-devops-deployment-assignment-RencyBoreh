@@ -1,0 +1,20 @@
+# Node modules
+node_modules/
+
+# Runtime files
+logs/
+*.log
+
+# Local env vars
+.env
+
+# Operating System metadata
+.DS_Store
+
+# Optional: compiled files
+dist/
+build/
+
+# Database dumps or uploads
+*.sqlite
+uploads/

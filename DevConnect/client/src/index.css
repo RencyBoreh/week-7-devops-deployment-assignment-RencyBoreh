@@ -1,0 +1,6 @@
+@import './styles/globals.css';  /* Must come first */
+
+/* Then Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

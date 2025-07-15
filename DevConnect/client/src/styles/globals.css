@@ -1,0 +1,11 @@
+/* styles/globals.css */
+
+/* Example: spacing helpers */
+.section-padding {
+  @apply px-4 md:px-8 lg:px-16 py-6;
+}
+
+/* Example: rounded input fields */
+.input-style {
+  @apply border rounded-lg px-4 py-2 w-full focus:outline-none focus:ring focus:border-blue-500;
+}
