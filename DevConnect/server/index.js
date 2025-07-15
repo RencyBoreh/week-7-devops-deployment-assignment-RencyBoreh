@@ -1,4 +1,3 @@
-// index.js
 const express = require('express');
 const dotenv = require('dotenv');
 const helmet = require('helmet');
@@ -7,7 +6,6 @@ const cors = require('cors');
 
 const connectDB = require('./config/db');
 const logger = require('./utils/logger');
-
 const { errorHandler } = require('./middleware/errorMiddleware');
 
 // Load environment variables
@@ -18,9 +16,19 @@ connectDB();
 
 const app = express();
 
+// CORS configuration
+const allowedOrigins = [
+  'http://localhost:5173', // for local development
+  'https://week-7-devops-deployment-assignment-rency-boreh-7lkrxz39p.vercel.app' // Vercel frontend
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
+
 // Middleware
 app.use(express.json()); // Parse JSON bodies
-app.use(cors()); // Enable CORS
 app.use(helmet()); // Secure headers
 app.use(morgan('dev')); // HTTP request logging
 
